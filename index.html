@@ -9,7 +9,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--purple:#5b21f4;--orange:#f59e0b;--black:#0a0a0a;--gray:#6b7280;--light:#f3f4f6;--border:#e5e7eb;--text:#111827}
 body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height:100vh}
-
+ 
 /* INTRO */
 #intro{max-width:680px;margin:0 auto;padding:64px 32px 80px}
 .intro-pill{display:inline-flex;align-items:center;gap:8px;background:#fef3c7;color:#92400e;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:32px}
@@ -25,7 +25,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 .btn-start{display:inline-flex;align-items:center;gap:10px;background:var(--purple);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:600;padding:18px 36px;border-radius:12px;border:none;cursor:pointer;margin-bottom:20px;width:auto}
 .btn-start:hover{opacity:.9}
 .intro-trust{font-size:13px;font-style:italic;color:var(--gray)}
-
+ 
 /* QUIZ */
 #quiz{display:none;min-height:100vh}
 .quiz-header{display:flex;align-items:center;justify-content:flex-end;padding:20px 40px;border-bottom:1px solid var(--border);gap:16px}
@@ -45,7 +45,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 .quiz-footer{display:flex;justify-content:flex-end;padding:0 40px 40px;max-width:720px;margin:0 auto}
 .btn-next{display:inline-flex;align-items:center;gap:8px;background:var(--purple);color:#fff;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;padding:14px 28px;border-radius:10px;border:none;cursor:pointer;opacity:.35;pointer-events:none;transition:opacity .2s}
 .btn-next.active{opacity:1;pointer-events:auto}
-
+ 
 /* EMAIL */
 #email-screen{display:none;max-width:560px;margin:0 auto;padding:80px 32px;text-align:center}
 .email-title{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;margin-bottom:12px}
@@ -54,7 +54,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 .email-fields input{padding:15px 18px;border:2px solid var(--border);border-radius:10px;font-family:'Inter',sans-serif;font-size:15px;color:var(--black);outline:none;transition:border-color .15s}
 .email-fields input:focus{border-color:var(--purple)}
 .privacy{font-size:12px;color:#9ca3af;margin-top:8px}
-
+ 
 /* RESULTS */
 #results{display:none}
 .results-wrap{max-width:600px;margin:0 auto;padding:48px 32px 60px}
@@ -90,7 +90,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 </style>
 </head>
 <body>
-
+ 
 <!-- INTRO -->
 <div id="intro">
   <div class="intro-pill">Free Assessment · 2 Minutes</div>
@@ -104,7 +104,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
   <button class="btn-start" onclick="startQuiz()">Take the Assessment →</button>
   <div><div class="intro-trust">Trusted by 300+ P&amp;C insurance agency owners</div></div>
 </div>
-
+ 
 <!-- QUIZ -->
 <div id="quiz">
   <div class="quiz-header">
@@ -118,7 +118,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
     <button class="btn-next" id="btn-next" onclick="nextQ()">Next →</button>
   </div>
 </div>
-
+ 
 <!-- EMAIL -->
 <div id="email-screen">
   <div class="email-title">Your results are ready.</div>
@@ -130,7 +130,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
   </div>
   <p class="privacy">No spam. We'll only send you things worth reading.</p>
 </div>
-
+ 
 <!-- RESULTS -->
 <div id="results">
   <div class="results-wrap">
@@ -168,10 +168,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
     </div>
   </div>
 </div>
-
+ 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyFSQtdz9ZBfN-K2gdRUQBE6Xcnilu_Qa2v0f3iW-V_Tjr2IqAhA8HeWVm_Lg3p9jsQ/exec';
-
+ 
 var questions = [
   { section:"Channel Clarity", text:"I can name the top three sources of new business for my agency in the last 90 days.", options:[{text:"Always true — I track this closely",pts:4},{text:"Usually true — I have a good sense of it",pts:3},{text:"Rarely true — it varies and I'm not sure",pts:2},{text:"I honestly don't know where most business comes from",pts:1}] },
   { section:"Channel Clarity", text:"If one of my top growth channels disappeared tomorrow, I have others that would keep my pipeline running.", options:[{text:"Strongly agree — we're well diversified",pts:4},{text:"Somewhat agree — we'd manage",pts:3},{text:"Somewhat disagree — it would hurt",pts:2},{text:"Strongly disagree — we'd be in trouble",pts:1}] },
@@ -184,16 +184,16 @@ var questions = [
   { section:"Team & Consistency", text:"Someone on my team could explain our marketing strategy clearly without my help.", options:[{text:"Yes, my team understands the system",pts:4},{text:"Partially — they know their piece but not the whole picture",pts:3},{text:"No, I'm the only one who really understands it",pts:2},{text:"We don't have a documented strategy to explain",pts:1}] },
   { section:"Team & Consistency", text:"I review marketing performance with clear data at least once a month.", options:[{text:"Yes, every month without fail",pts:4},{text:"Occasionally, when I remember",pts:3},{text:"Rarely",pts:2},{text:"Never",pts:1}] }
 ];
-
+ 
 var current = 0;
 var answers = [null,null,null,null,null,null,null,null,null,null];
-
+ 
 function startQuiz() {
   document.getElementById('intro').style.display = 'none';
   document.getElementById('quiz').style.display = 'block';
   render();
 }
-
+ 
 function render() {
   var q = questions[current];
   var pct = (current / 10) * 100;
@@ -202,7 +202,7 @@ function render() {
   var btn = document.getElementById('btn-next');
   btn.textContent = current === 9 ? 'See My Score →' : 'Next →';
   if (answers[current] !== null) { btn.classList.add('active'); } else { btn.classList.remove('active'); }
-
+ 
   var html = '<div class="section-chip">' + q.section + '</div>';
   html += '<div class="question-text">' + q.text + '</div>';
   html += '<div class="options">';
@@ -213,7 +213,7 @@ function render() {
   html += '</div>';
   document.getElementById('q-area').innerHTML = html;
 }
-
+ 
 function pick(i) {
   answers[current] = i;
   var opts = document.querySelectorAll('.option');
@@ -223,7 +223,7 @@ function pick(i) {
   document.getElementById('btn-next').classList.add('active');
   setTimeout(function() { nextQ(); }, 400);
 }
-
+ 
 function nextQ() {
   if (answers[current] === null) return;
   if (current < 9) {
@@ -236,11 +236,11 @@ function nextQ() {
     window.scrollTo(0, 0);
   }
 }
-
+ 
 function showResults() {
   var firstName = document.getElementById('fname').value.trim();
   var email = document.getElementById('femail').value.trim();
-
+ 
   var secs = [0,0,0,0,0];
   var total = 0;
   for (var i = 0; i < answers.length; i++) {
@@ -248,16 +248,16 @@ function showResults() {
     total += pts;
     secs[Math.floor(i/2)] += pts;
   }
-
+ 
   var tierLabel = total >= 35 ? 'Marketing Independent' : total >= 25 ? 'In Transition' : 'Vendor Dependent';
-
+ 
   // Send to Google Sheet via form POST (most reliable with Apps Script)
   var form = document.createElement('form');
   form.method = 'POST';
   form.action = SHEET_URL;
   form.target = 'hidden-iframe';
   form.style.display = 'none';
-
+ 
   var fields = { firstName: firstName, email: email, score: total, tier: tierLabel };
   for (var key in fields) {
     var input = document.createElement('input');
@@ -266,7 +266,7 @@ function showResults() {
     input.value = fields[key];
     form.appendChild(input);
   }
-
+ 
   var iframe = document.getElementById('hidden-iframe');
   if (!iframe) {
     iframe = document.createElement('iframe');
@@ -275,20 +275,20 @@ function showResults() {
     iframe.style.display = 'none';
     document.body.appendChild(iframe);
   }
-
+ 
   document.body.appendChild(form);
   form.submit();
   document.body.removeChild(form);
-
+ 
   document.getElementById('email-screen').style.display = 'none';
   document.getElementById('results').style.display = 'block';
   window.scrollTo(0, 0);
-
+ 
   // Animate score
   var n = 0;
   var el = document.getElementById('score-num');
   var iv = setInterval(function() { n++; el.textContent = n; if (n >= total) clearInterval(iv); }, 40);
-
+ 
   // Tier messaging
   var pill = document.getElementById('tier-pill');
   var hl = document.getElementById('tier-headline');
@@ -309,7 +309,7 @@ function showResults() {
     hl.textContent = "Your growth is fragile — and likely costing more than you realize.";
     desc.textContent = "That doesn't mean you're not growing, but you don't fully control it yet. One vendor change, one algorithm shift, or one key person leaving could significantly disrupt your pipeline. This is exactly the problem Marketing Independence is designed to solve.";
   }
-
+ 
   // Bars
   setTimeout(function() {
     document.getElementById('score-track-fill').style.width = (total / 40 * 100) + '%';
@@ -322,7 +322,15 @@ function showResults() {
     }
   }, 300);
 }
-
+ 
 function retake() {
   current = 0;
-  answers = [
+  answers = [null,null,null,null,null,null,null,null,null,null];
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('intro').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
+ 
