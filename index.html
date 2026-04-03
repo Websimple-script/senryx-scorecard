@@ -42,7 +42,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 .intro-stat{flex:1;padding-right:24px}
 .intro-stat+.intro-stat{border-left:1px solid var(--border);padding-left:24px}
 .stat-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:4px}
-.stat-value{font-size:20px;font-weight:600;color:var(--black)}
+.stat-value{font-size:24px;font-weight:600;color:var(--black)}
 .btn-start{display:inline-flex;align-items:center;gap:10px;background:var(--purple);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:600;padding:18px 36px;border-radius:12px;border:none;cursor:pointer;margin-bottom:20px;width:auto}
 .btn-start:hover{opacity:.9}
 .intro-trust{font-size:13px;font-style:italic;color:var(--gray)}
@@ -101,7 +101,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 .cat-bar-fill.warn{background:var(--orange)}
 .cat-bar-fill.danger{background:#ef4444}
 .cat-score{font-size:13px;font-weight:700;color:var(--purple);white-space:nowrap}
-.cta-block{background:var(--black);border-radius:16px;padding:40px 36px;text-align:center;color:#fff;margin-bottom:24px}
+.cta-block{background:#4f10ff;border-radius:16px;padding:40px 36px;text-align:center;color:#fff;margin-bottom:24px}
 .cta-block h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:10px}
 .cta-block p{font-size:14px;color:#9ca3af;line-height:1.6;margin-bottom:24px}
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -113,7 +113,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 <body>
 
 <div style="padding:16px 24px;border-bottom:1px solid #e5e7eb;">
-  <a href="https://senryx.com/podcast" style="display:inline-block;">
+  <a href="https://senryx.com" style="display:inline-block;">
     <img src="https://images.squarespace-cdn.com/content/68e7db131f56d475ab63c3a4/131ac506-39da-421b-a240-cd70425f04d6/Senryx+Banner.webp?content-type=image%2Fwebp" alt="Senryx Group" style="height:36px;width:auto;display:block;">
   </a>
 </div>
@@ -121,15 +121,14 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 <!-- INTRO -->
 <div id="intro">
   <div class="intro-pill">Free Assessment · 2 Minutes</div>
-  <h1 class="intro-title">How independent is<br>your <em>marketing</em>?</h1>
-  <p class="intro-desc">10 questions. Honest answers. Find out if you truly own your agency's growth — Or if a vendor, algorithm, or platform owns it for you.</p>
+  <h1 class="intro-title">How <em>Marketing Independent</em> <sup style="font-size:0.4em;vertical-align:super;font-style:normal;color:var(--purple);">TM</sup><br>Is Your Agency?</h1>
+  <p class="intro-desc">10 questions. Honest answers. Find out if your agency is dependent on vendors, channels, people, carriers, or platforms you don't control.</p>
   <div class="intro-stats">
     <div class="intro-stat"><div class="stat-label">Questions</div><div class="stat-value">10</div></div>
     <div class="intro-stat"><div class="stat-label">Time</div><div class="stat-value">~2 minutes</div></div>
-    <div class="intro-stat"><div class="stat-label">Result</div><div class="stat-value">Your MI Score</div></div>
   </div>
   <button class="btn-start" onclick="startQuiz()">Take the Assessment →</button>
-  <div><div class="intro-trust">Trusted by 300+ P&amp;C insurance agency owners</div></div>
+  <div><div class="intro-trust">Trusted by 300+ insurance agencies</div></div>
 </div>
 
 <!-- QUIZ -->
@@ -149,7 +148,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 <!-- EMAIL -->
 <div id="email-screen">
   <div class="email-title">Your results are ready.</div>
-  <p class="email-sub">Enter your details to see your Marketing Independence Score and section breakdown.</p>
+  <p class="email-sub">Enter your details to see your Marketing Independence Score.</p>
   <div class="email-fields">
     <input type="text" id="fname" placeholder="First name" />
     <input type="email" id="femail" placeholder="Email address" />
@@ -169,28 +168,28 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
       <div class="score-denom">/ 40</div>
     </div>
     <div class="score-track-labels">
-      <span>Vendor Dependent</span><span>In Transition</span><span>Independent</span>
+      <span>Dependent</span><span>In Transition</span><span>Independent</span>
     </div>
     <div class="score-track"><div class="score-track-fill" id="score-track-fill"></div></div>
     <div class="cat-label">Score by Category</div>
     <div class="cat-grid">
-      <div class="cat-card"><div class="cat-card-label">Channel Clarity</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-0"></div></div><div class="cat-score" id="cs-0"></div></div></div>
-      <div class="cat-card"><div class="cat-card-label">Attribution</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-1"></div></div><div class="cat-score" id="cs-1"></div></div></div>
-      <div class="cat-card"><div class="cat-card-label">Diversification</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-2"></div></div><div class="cat-score" id="cs-2"></div></div></div>
-      <div class="cat-card"><div class="cat-card-label">Vendor Independence</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-3"></div></div><div class="cat-score" id="cs-3"></div></div></div>
-      <div class="cat-card"><div class="cat-card-label">Team &amp; Consistency</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-4"></div></div><div class="cat-score" id="cs-4"></div></div></div>
+      <div class="cat-card"><div class="cat-card-label">Channel Dependence</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-0"></div></div><div class="cat-score" id="cs-0"></div></div></div>
+      <div class="cat-card"><div class="cat-card-label">System Awareness</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-1"></div></div><div class="cat-score" id="cs-1"></div></div></div>
+      <div class="cat-card"><div class="cat-card-label">Platform Dependence</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-2"></div></div><div class="cat-score" id="cs-2"></div></div></div>
+      <div class="cat-card"><div class="cat-card-label">Vendor Dependence</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-3"></div></div><div class="cat-score" id="cs-3"></div></div></div>
+      <div class="cat-card"><div class="cat-card-label">People Dependence</div><div class="cat-bar-row"><div class="cat-bar-bg"><div class="cat-bar-fill" id="cb-4"></div></div><div class="cat-score" id="cs-4"></div></div></div>
     </div>
     <div class="cta-block">
       <h3>Find out what's holding your score back.</h3>
-      <p>Book a free 15-minute Marketing Map call with Jake. We'll look at your channels, identify where your growth is leaking, and give you a clear next step. No sales pitch, no obligation.</p>
+      <p>Book a free marketing strategy call with Jake. We'll look at your channels, identify where your growth is leaking, and give you a clear next step. No sales pitch, no obligation.</p>
       <div class="cta-btns">
         <a href="https://SenryxGroup.as.me/discovery-call" target="_blank" class="btn-cta-primary">Book a Free Call →</a>
         <button class="btn-cta-secondary" onclick="retake()">Retake Assessment</button>
       </div>
     </div>
     <div class="results-footer">
-      <span>senryx.com</span>
-      <span>Marketing Independence for P&amp;C Agencies</span>
+      <a href="https://senryx.com" style="display:inline-block;"><img src="https://images.squarespace-cdn.com/content/68e7db131f56d475ab63c3a4/131ac506-39da-421b-a240-cd70425f04d6/Senryx+Banner.webp?content-type=image%2Fwebp" alt="Senryx Group" style="height:24px;width:auto;display:block;opacity:0.5;"></a>
+      <span>Sustainable Growth for Leading Insurance Agencies</span>
     </div>
   </div>
 </div>
@@ -199,16 +198,16 @@ body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height
 var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyFSQtdz9ZBfN-K2gdRUQBE6Xcnilu_Qa2v0f3iW-V_Tjr2IqAhA8HeWVm_Lg3p9jsQ/exec';
 
 var questions = [
-  { section:"Channel Clarity", text:"I can name the top three sources of new business for my agency in the last 90 days.", options:[{text:"Always true. I track this closely.",pts:4},{text:"Usually true. I have a good sense of it.",pts:3},{text:"Rarely true. It varies and I'm not sure.",pts:2},{text:"I honestly don't know where most business comes from",pts:1}] },
-  { section:"Channel Clarity", text:"If one of my top growth channels disappeared tomorrow, I have others that would keep my pipeline running.", options:[{text:"Strongly agree. We're well diversified.",pts:4},{text:"Somewhat agree. We'd manage.",pts:3},{text:"Somewhat disagree. It would hurt.",pts:2},{text:"Strongly disagree. We'd be in trouble.",pts:1}] },
-  { section:"Attribution", text:"I know approximately what it costs me to acquire a new client.", options:[{text:"Yes, I track this regularly",pts:4},{text:"I have a rough idea",pts:3},{text:"I've never calculated it",pts:2},{text:"I wouldn't know where to start",pts:1}] },
-  { section:"Attribution", text:"When a new client comes in, I know which marketing effort brought them to me.", options:[{text:"Almost always. We have tracking in place.",pts:4},{text:"Sometimes. When I remember to ask.",pts:3},{text:"Rarely. I usually just guess.",pts:2},{text:"I usually just ask and trust whatever they say",pts:1}] },
-  { section:"Diversification", text:"My agency generates new business from at least three distinct channels (referrals, digital, traditional, etc.).", options:[{text:"Yes, all three are active and producing",pts:4},{text:"Two are active, one is inconsistent",pts:3},{text:"We rely mainly on one or two channels",pts:2},{text:"We rely almost entirely on one source",pts:1}] },
-  { section:"Diversification", text:"My marketing strategy would survive a major platform or algorithm change (Google, Facebook, etc.).", options:[{text:"Yes, we're not dependent on any one platform",pts:4},{text:"Mostly, but one change would hurt us",pts:3},{text:"No, a platform change would significantly impact us",pts:2},{text:"We haven't thought about this",pts:1}] },
-  { section:"Vendor Independence", text:"I could replace my current marketing vendors without losing momentum in my pipeline.", options:[{text:"Yes, we have systems that don't depend on any one vendor",pts:4},{text:"It would be disruptive but we'd recover",pts:3},{text:"It would seriously set us back",pts:2},{text:"Our growth would stop",pts:1}] },
-  { section:"Vendor Independence", text:"My marketing system runs even when I'm not actively managing it.", options:[{text:"Yes. It runs consistently in the background.",pts:4},{text:"Somewhat, but it needs regular attention from me",pts:3},{text:"Not really, I'm the main driver of new business",pts:2},{text:"There is no system, it's all reactive",pts:1}] },
-  { section:"Team & Consistency", text:"Someone on my team could explain our marketing strategy clearly without my help.", options:[{text:"Yes, my team understands the system",pts:4},{text:"Partially. They know their piece but not the whole picture.",pts:3},{text:"No, I'm the only one who really understands it",pts:2},{text:"We don't have a documented strategy to explain",pts:1}] },
-  { section:"Team & Consistency", text:"I review marketing performance with clear data at least once a month.", options:[{text:"Yes, every month without fail",pts:4},{text:"Occasionally, when I remember",pts:3},{text:"Rarely",pts:2},{text:"Never",pts:1}] }
+  { section:"Channel Dependence", text:"I can name the top three sources of new business for my agency in the last 90 days.", options:[{text:"Always true. I track this closely.",pts:4},{text:"Usually true. I have a good sense of it.",pts:3},{text:"Rarely true. It varies and I'm not sure.",pts:2},{text:"I honestly don't know where most business comes from",pts:1}] },
+  { section:"Channel Dependence", text:"If one of my top growth channels disappeared tomorrow, I have others that would keep my pipeline running.", options:[{text:"Strongly agree. We're well diversified.",pts:4},{text:"Somewhat agree. We'd manage.",pts:3},{text:"Somewhat disagree. It would hurt.",pts:2},{text:"Strongly disagree. We'd be in trouble.",pts:1}] },
+  { section:"Channel Dependence", text:"My agency generates new business from a healthy mix of referrals, digital marketing, and traditional marketing.", options:[{text:"Yes, all three are active and consistently producing.",pts:4},{text:"Two are active, one is minimal or inconsistent.",pts:3},{text:"We rely mainly on one or two of these.",pts:2},{text:"We rely almost entirely on one source.",pts:1}] },
+  { section:"Vendor Dependence", text:"I could replace my current marketing vendors without losing momentum in my pipeline.", options:[{text:"Yes, we have systems that don't depend on any one vendor",pts:4},{text:"It would be disruptive but we'd recover",pts:3},{text:"It would seriously set us back",pts:2},{text:"Our growth would stop",pts:1}] },
+  { section:"Vendor Dependence", text:"My marketing system runs even when I'm not actively managing it.", options:[{text:"Yes. It runs consistently in the background.",pts:4},{text:"Somewhat, but it needs regular attention from me",pts:3},{text:"Not really, I'm the main driver of new business",pts:2},{text:"There is no system, it's all reactive",pts:1}] },
+  { section:"People Dependence", text:"My agency's new business would not significantly drop if my top producer, a key referral source, or I personally stepped back for 60 days.", options:[{text:"Strongly agree. We have systems and people that don't depend on any one person.",pts:4},{text:"Somewhat agree. It would slow down but recover quickly.",pts:3},{text:"Somewhat disagree. We'd feel it significantly for several months.",pts:2},{text:"Strongly disagree. New business would largely stop.",pts:1}] },
+  { section:"People Dependence", text:"Someone on my team could explain our marketing strategy clearly without my help.", options:[{text:"Yes, my team understands the system",pts:4},{text:"Partially. They know their piece but not the whole picture.",pts:3},{text:"No, I'm the only one who really understands it",pts:2},{text:"We don't have a documented strategy to explain",pts:1}] },
+  { section:"Platform Dependence", text:"My marketing strategy would survive a major platform or algorithm change (Google, Facebook, etc.).", options:[{text:"Yes, we're not dependent on any one platform",pts:4},{text:"Mostly, but one change would hurt us",pts:3},{text:"No, a platform change would significantly impact us",pts:2},{text:"We haven't thought about this",pts:1}] },
+  { section:"System Awareness", text:"I know approximately what it costs me to acquire a new client.", options:[{text:"Yes, I track this regularly",pts:4},{text:"I have a rough idea",pts:3},{text:"I've never calculated it",pts:2},{text:"I wouldn't know where to start",pts:1}] },
+  { section:"System Awareness", text:"I review marketing performance with performance data at least once a month.", options:[{text:"Yes, every month without fail",pts:4},{text:"Occasionally, when I remember",pts:3},{text:"Rarely",pts:2},{text:"Never",pts:1}] }
 ];
 
 var current = 0;
